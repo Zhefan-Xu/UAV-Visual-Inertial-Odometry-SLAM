@@ -48,4 +48,6 @@ To run the visual inertial odometry, you need to follow the steps below:
   ```
 
 ### c. Topics & Visualization
-You can find the estimated pose in ```/mavros/local_position/pose```
+Estimated pose topic:  ```/mavros/local_position/pose```
+Feature Tracker Image: ```/feature_tracker/feature_img```
+History Path: ```/path_px4```
