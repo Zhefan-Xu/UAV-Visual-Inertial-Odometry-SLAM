@@ -20,3 +20,5 @@ git clone https://github.com/Zhefan-Xu/VINS-PX4
 cd ~/catkin_ws
 catkin_make
 ```
+### b. Run VINS VIO
+First, complete the [calibration](https://github.com/Zhefan-Xu/camera-imu-calibration-guide) part. After getting the parameters, you can modify the parameters of D435i [here for VINS-MONO](https://github.com/Zhefan-Xu/VINS-PX4/tree/main/VINS-Mono/config/realsense) and [here for VINS-Fusion](https://github.com/Zhefan-Xu/VINS-PX4/tree/main/VINS-Fusion/config/realsense_d435i).
