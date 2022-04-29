@@ -26,4 +26,22 @@ cd ~/catkin_ws
 catkin_make
 ```
 ### b. Run VINS VIO
-First, complete the [calibration](https://github.com/Zhefan-Xu/camera-imu-calibration-guide) part. After getting the parameters, you can modify the parameters of D435i [here for VINS-MONO](https://github.com/Zhefan-Xu/VINS-PX4/tree/main/VINS-Mono/config/realsense) and [here for VINS-Fusion](https://github.com/Zhefan-Xu/VINS-PX4/tree/main/VINS-Fusion/config/realsense_d435i).
+To run the visual inertial odometry, you need to follow the steps below:
+  - Complete the [calibration](https://github.com/Zhefan-Xu/camera-imu-calibration-guide) part. 
+  - Modify the parameters of D435i [here for VINS-MONO](https://github.com/Zhefan-Xu/VINS-PX4/tree/main/VINS-Mono/config/realsense) and [here for VINS-Fusion](https://github.com/Zhefan-Xu/VINS-PX4/tree/main/VINS-Fusion/config/realsense_d435i).
+  - Turn on D435i camera. Check [this](https://github.com/Zhefan-Xu/camera-imu-calibration-guide/blob/main/rs_d435i.launch) for the launch file:
+  ```
+  roslaunch realsense2_camera rs_d435i.launch
+  ```
+  - Connect to PX4:
+  ```
+  roslaunch mavros px4.launch # you need to setup this yourself
+  ```
+  - Run VINS-Mono/VINS-Fusion
+  ```
+  roslaunch vins_estimator vins_mono_d435i_px4.launch # VINS MONO
+  ```
+  or
+  ```
+  roslaunch vins vins_fusion_d435i_px4.launch # VINS FUSION
+  ```
