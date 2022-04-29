@@ -25,7 +25,7 @@ Finally, make the packages
 cd ~/catkin_ws
 catkin_make
 ```
-### b. Run VINS VIO
+### b. Run VINS VIO Localization
 To run the visual inertial odometry, you need to follow the steps below:
   - Complete the [calibration](https://github.com/Zhefan-Xu/camera-imu-calibration-guide) part. 
   - Modify the parameters of D435i [here for VINS-MONO](https://github.com/Zhefan-Xu/VINS-PX4/tree/main/VINS-Mono/config/realsense) and [here for VINS-Fusion](https://github.com/Zhefan-Xu/VINS-PX4/tree/main/VINS-Fusion/config/realsense_d435i).
