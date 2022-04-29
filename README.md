@@ -29,6 +29,7 @@ catkin_make
 To run the visual inertial odometry, you need to follow the steps below:
   - Complete the [calibration](https://github.com/Zhefan-Xu/camera-imu-calibration-guide) part. 
   - Modify the parameters of D435i [here for VINS-MONO](https://github.com/Zhefan-Xu/VINS-PX4/tree/main/VINS-Mono/config/realsense) and [here for VINS-Fusion](https://github.com/Zhefan-Xu/VINS-PX4/tree/main/VINS-Fusion/config/realsense_d435i).
+  - Modify the Transform (TF) for ```camera_link``` and ```base_link``` in [VINS-Mnno launch file](https://github.com/Zhefan-Xu/VINS-PX4/blob/main/VINS-Fusion/vins_estimator/launch/vins_fusion_d435i_px4.launch) and [VINS-Fusion launch file](https://github.com/Zhefan-Xu/VINS-PX4/blob/main/VINS-Mono/vins_estimator/launch/vins_mono_d435i_px4.launch)
   - Turn on D435i camera. Check [this](https://github.com/Zhefan-Xu/camera-imu-calibration-guide/blob/main/rs_d435i.launch) for the launch file:
   ```
   roslaunch realsense2_camera rs_d435i.launch
@@ -45,3 +46,6 @@ To run the visual inertial odometry, you need to follow the steps below:
   ```
   roslaunch vins vins_fusion_d435i_px4.launch # VINS FUSION
   ```
+
+### c. Topics & Visualization
+You can find the estimated pose in ```/mavros/local_position/pose```
