@@ -4,6 +4,12 @@
 ### a. Installation (CPU Version)
 This part is directly from the original repos. Tested on Ubuntu 16.04 and 18.04.
 
+You can find the modified packages for PX4 in this repo. If you only need VINS-Fusion or VINS-Mono, you can only download one of them. 
+```
+cd ~/catkin_ws/src
+git clone https://github.com/Zhefan-Xu/VINS-PX4
+```
+
 Install related ROS Packages:
 ```
 sudo apt-get install ros-YOUR_DISTRO-cv-bridge ros-YOUR_DISTRO-tf ros-YOUR_DISTRO-message-filters ros-YOUR_DISTRO-image-transport
@@ -16,7 +22,6 @@ sudo make install
 ```
 Finally, make the packages
 ```
-git clone https://github.com/Zhefan-Xu/VINS-PX4
 cd ~/catkin_ws
 catkin_make
 ```
