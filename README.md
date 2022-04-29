@@ -48,6 +48,15 @@ To run the visual inertial odometry, you need to follow the steps below:
   ```
 
 ### c. Topics & Visualization
-Estimated pose topic:  ```/mavros/local_position/pose```
-Feature Tracker Image: ```/feature_tracker/feature_img```
-History Path: ```/path_px4```
+  - Estimated pose topic:  ```/mavros/local_position/pose```
+  - Feature Tracker Image: ```/feature_tracker/feature_img```
+  - History Path: ```/path_px4```
+For RVIZ visualization:
+
+```
+roslaunch vins_estimator vins_rviz_px4.launch # VINS-Mono
+```
+or
+```
+roslaunch vins vins_rviz_px4.launch # VINS-Fusion
+```
