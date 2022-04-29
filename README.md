@@ -16,6 +16,7 @@ sudo make install
 ```
 Finally, make the packages
 ```
+git clone https://github.com/Zhefan-Xu/VINS-PX4
 cd ~/catkin_ws
 catkin_make
 ```
