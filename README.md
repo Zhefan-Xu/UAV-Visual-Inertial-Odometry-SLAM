@@ -4,7 +4,7 @@
 ### a. Installation (CPU Version)
 This part is directly from the original repos. Tested on Ubuntu 16.04 and 18.04.
 
-You can find the modified packages for PX4 in this repo. If you only need VINS-Fusion or VINS-Mono, you can only download one of them. 
+You can find the modified packages for PX4 in this repo. If you only need VINS-Fusion or VINS-Mono, you can just download one of them. 
 ```
 cd ~/catkin_ws/src
 git clone https://github.com/Zhefan-Xu/VINS-PX4
